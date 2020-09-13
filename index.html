@@ -1,7 +1,22 @@
 <!DOCTYPE html>
 <html>
-<h1>HELLO WORLD!</h1>
-<form action="https://sc.ftqq.com/SCU68319T3ae741947600a9051ec7a25c4d604a495dee1cff68f1c.send?text=这是测试&desp=测试测试" method="POST">
-    <button type="submit">提交</button>
-</form>
+    <h1>HELLO WORLD!</h1>
+    <!-- <form action="https://sc.ftqq.com/SCU68319T3ae741947600a9051ec7a25c4d604a495dee1cff68f1c.send?text=这是测试&desp=测试测试" method="POST">
+        <button type="submit">向微信发送信息</button>
+    </form> -->
+    <button onclick="choose()">选 择 吧</button>
+    <div style="display: none;" id="choose_box"></div>
 </html>
+<script>
+    function choose() {
+        let flag =  parseInt(Math.random()*10)%2
+        let result;
+        if(flag===1) {
+            result = '是'
+        }else {
+            result = '否'
+        }
+        document.getElementById("choose_box").setAttribute("style", "display:block;")
+        document.getElementById("choose_box").setAttribute("text", result)
+    }
+</script>
