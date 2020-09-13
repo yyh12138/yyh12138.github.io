@@ -1,11 +1,15 @@
 <!DOCTYPE html>
 <html>
-    <!-- <form action="https://sc.ftqq.com/SCU68319T3ae741947600a9051ec7a25c4d604a495dee1cff68f1c.send?text=这是测试&desp=测试测试" method="POST">
+    <form action="https://sc.ftqq.com/SCU68319T3ae741947600a9051ec7a25c4d604a495dee1cff68f1c.send?text=这是测试&desp=测试测试" method="POST">
         <button type="submit">向微信发送信息</button>
-    </form> -->
-    <button onclick="choose()" style="font-size: 26em; background-color: white; border: 0;">选 择</button>
-    <div style="display: none; display: flex; justify-content: center; align-items: center;" id="choose_box">
-        <div id="word" style="color: red; font-size: 20px;"></div>
+    </form>
+    <button onclick="choose()" style="font-size: 256em; background-color: white; border: 0;">选 择</button>
+    <div style="display: none;" id="choose_box">
+        <div id="word" style="color: red; font-size: 15em"></div>
+        <div id="picture">
+            <img id="yes" style="display: none;" src="/yes.png" alt="">
+            <img id="no" style="display: none;" src="/no.png" alt="">
+        </div>
     </div>
 </html>
 <script>
@@ -14,10 +18,12 @@
         let result;
         if(flag===1) {
             result = '是'
+            document.getElementById('yes').setAttribute("style", "")
         }else {
             result = '否'
+            document.getElementById('no').setAttribute("style", "")
         }
-        document.getElementById("choose_box").setAttribute("style", "display:block;")
+        document.getElementById("choose_box").setAttribute("style", "display:flex; justify-content: center; align-items: center;")
         document.getElementById("word").innerText = result
     }
 </script>
